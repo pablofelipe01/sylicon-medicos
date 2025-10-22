@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner'
 import { WalletInfo } from '@/components/WalletInfo'
 import { TokenBalance } from '@/components/TokenBalance'
+import { ProgressBar } from '@/components/ProgressBar'
 import { User, LogOut, Wallet, AlertCircle } from 'lucide-react'
 import type { Medico, TokenInfo, ApiResponse } from '@/types'
 
@@ -218,7 +219,23 @@ export default function DashboardPage() {
 
         {/* Token Balance */}
         {medico.wallet_address && tokenInfo && (
-          <TokenBalance tokenInfo={tokenInfo} />
+          <>
+            <TokenBalance tokenInfo={tokenInfo} />
+            {/* Progress Bar */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Estado del Patrimonio</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ProgressBar value={300} className="py-4" />
+                <div className="text-center mt-2">
+                  <p className="text-sm text-gray-600">
+                    Progreso del patrimonio tokenizado
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </>
         )}
 
         {/* No tokens message */}
