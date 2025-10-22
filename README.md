@@ -8,7 +8,7 @@ Plataforma de tokenización de patrimonio para médicos asociados usando blockch
 - 💰 Creación automática de billeteras EVM (Polygon)
 - 🪙 Visualización de tokens ERC-1155
 - 📱 Diseño responsivo y moderno
-- ⚡ Built with Next.js 14, TypeScript, y Tailwind CSS
+- ⚡ Built with Next.js 14, TypeScript, y Tailwind CSS ant Tech
 
 ## Stack Tecnológico
 
