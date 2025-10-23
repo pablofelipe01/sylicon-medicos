@@ -227,10 +227,13 @@ export default function DashboardPage() {
                 <CardTitle>Estado del Patrimonio</CardTitle>
               </CardHeader>
               <CardContent>
-                <ProgressBar value={300} className="py-4" />
+                <ProgressBar 
+                  value={Math.floor(parseFloat(tokenInfo.balance)) * 100} 
+                  className="py-4" 
+                />
                 <div className="text-center mt-2">
                   <p className="text-sm text-gray-600">
-                    Progreso del patrimonio tokenizado
+                    Progreso del patrimonio tokenizado ({Math.floor(parseFloat(tokenInfo.balance))} tokens)
                   </p>
                 </div>
               </CardContent>

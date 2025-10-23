@@ -23,8 +23,10 @@ export function ProgressBar({
   
   // Puntos de referencia
   const point100 = ((100 - min) / (max - min)) * 100
+  const point200 = ((200 - min) / (max - min)) * 100
   const point300 = ((300 - min) / (max - min)) * 100
-  const point600 = ((600 - min) / (max - min)) * 100
+  const point400 = ((400 - min) / (max - min)) * 100
+  const point500 = ((500 - min) / (max - min)) * 100
   
   return (
     <div className={`w-full ${className}`}>
@@ -32,7 +34,10 @@ export function ProgressBar({
       <div className="flex justify-between text-sm text-gray-600 mb-2">
         <span>0</span>
         <span>100</span>
+        <span>200</span>
         <span>300</span>
+        <span>400</span>
+        <span>500</span>
         <span>600</span>
       </div>
       
@@ -61,10 +66,25 @@ export function ProgressBar({
             className="absolute top-0 bottom-0 w-0.5 bg-white opacity-80"
             style={{ left: `${point100}%` }}
           />
+          {/* Línea en 200 */}
+          <div 
+            className="absolute top-0 bottom-0 w-0.5 bg-white opacity-80"
+            style={{ left: `${point200}%` }}
+          />
           {/* Línea en 300 */}
           <div 
             className="absolute top-0 bottom-0 w-0.5 bg-white opacity-80"
             style={{ left: `${point300}%` }}
+          />
+          {/* Línea en 400 */}
+          <div 
+            className="absolute top-0 bottom-0 w-0.5 bg-white opacity-80"
+            style={{ left: `${point400}%` }}
+          />
+          {/* Línea en 500 */}
+          <div 
+            className="absolute top-0 bottom-0 w-0.5 bg-white opacity-80"
+            style={{ left: `${point500}%` }}
           />
         </div>
         
